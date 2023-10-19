@@ -1,0 +1,168 @@
+body{
+    background: linear-gradient(to right, #fc5c7d, #6a82fb);
+}
+
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+
+        /* Center TODO Container */
+.todo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 300px;
+    width: 100%;
+}
+
+/* Header title style */
+.todo_header .title{
+    letter-spacing: 10px;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Form Container Style */
+.todo_add{
+    margin-bottom: 10px;
+    box-shadow: 3px 3px 5px #494949;
+}
+
+/* form input style */
+.todo_add input{
+    width: 100%;
+    font-size: 14px;
+    border: none;
+    padding: 10px;
+    background-color: #243763;
+    color: #fff;
+}
+
+/* Customize the color input placeholder */
+.todo_add input::placeholder{
+    color: #fff;
+}
+
+/* Remove the input outline  */
+.todo_add input:focus-visible{
+    outline: none;
+}
+
+/* Todo List Container Style */
+.todo_body{
+    background-color: #243763;
+    width: 100%;
+    height: 250px;
+    overflow-y: auto;
+    box-shadow: 3px 3px 5px #494949;
+}
+
+/* Center the empty state and apply style on it */
+.todo_body .empty{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    row-gap: 5px;
+}
+.todo_body .empty img{
+    width: 150px;
+}
+.todo_body .empty .title{
+    color: #fff;
+    margin: 0;
+}
+
+/* Remove the default list style */
+.todo_list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* List style item */
+.todo_list li{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #494949;
+    padding: 5px 10px;
+    gap: 5px;
+}
+
+/* Remove the last item of the list item */
+.todo_list li:last-child{
+    border-bottom: none;
+}
+.todo_list li label{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    gap: 5px;
+}
+.todo_list li input[type="text"] {
+    border: none;
+    width: 100%;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+/* Remove the input outline */
+.todo_list li input[type="text"]:focus-visible{
+    outline: none;
+}
+
+/* List item style when state is read only */
+.todo_list li input[type="text"]:read-only{
+    background: transparent;
+    color: #fff;
+    pointer-events: none;
+}
+
+/* Checkbox Style */
+.todo_list li input[type="checkbox"] {
+    margin: 0;
+    width: 10px;
+    cursor: pointer;
+}
+
+/* Styles when item mark as completed */
+.todo_list li[data-status="completed"] input[type="text"] {
+    text-decoration: line-through;
+    color: #aaa;
+}
+.todo_list li .actions{
+    display: flex;
+    column-gap: 5px;
+}
+.todo_list li .actions button{
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 12px;
+    background-color: #fff;
+    padding: 3px;
+    border-radius: 100%;
+}
+.todo_list li .actions button:hover{
+    color: #fff;
+    background-color: #000;
+}
+.todo_footer{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #243763;
+    box-shadow: 3px 3px 5px #494949;
+    color: #fff;
+    font-size: 12px;
+    justify-content: space-between;
+    padding: 10px;
+}
+.todo_footer .clear{
+    cursor: pointer;
+}
